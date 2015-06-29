@@ -14,8 +14,8 @@ https://blog.giantswarm.io/deploy-meteor-application-in-1-minute/
 ## Deploying on the Swarm
 
 1. Get the [swarm.json](https://github.com/giantswarm/giantswarm-meteor/blob/master/swarm.json) and save it to your local directory.
-2. Edit the swarm.json to reflect your Meteor project’s GitHub URL[^1] and desired domain.
+2. Edit the swarm.json to reflect your Meteor project’s GitHub URL* and desired domain.
 3. `swarm up`
 4. Profit
 
-[^1]: You can add an SSH-key or a custom (non-GitHub) Bundle-URL through the other environment variables detailed on the image’s [Docker Hub page](https://registry.hub.docker.com/u/ulexus/meteor/).
+*: You can add an SSH-key or a custom (non-GitHub) Bundle-URL through the other environment variables detailed on the image’s [Docker Hub page](https://registry.hub.docker.com/u/ulexus/meteor/).
