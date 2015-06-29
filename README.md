@@ -6,12 +6,12 @@ Check out the full guide here:
 
 https://blog.giantswarm.io/deploy-meteor-application-in-1-minute/
 
-**Prerequisites**
+## Prerequisites
 
 * A [Giant Swarm account](https://giantswarm.io/request-invite/) (or for local deployment [Docker](http://docs.docker.com/) and [Docker Compose](http://docs.docker.com/compose/install/))
 * Your Meteor application in a GitHub repository (or somewhere else online)
 
-**Quick Steps**
+## Deploying on the Swarm
 
 1. Get the [swarm.json](https://github.com/giantswarm/giantswarm-meteor/blob/master/swarm.json) and save it to your local directory.
 2. Edit the swarm.json to reflect your Meteor project’s GitHub URL[^1] and desired domain.
