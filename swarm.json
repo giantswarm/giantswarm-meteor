@@ -1,32 +1,32 @@
 {
-  "app_name": "meteor-test",
-  "services": [
-    {
-      "service_name": "meteor-test",
-      "components": [
+  "name": "meteor-test",
+  "components": {
+    "meteor-test": {
+      "image": "ulexus/meteor",
+      "ports": [
+        80
+      ],
+      "env": [
+        "REPO=https://github.com/Differential/meteor-boilerplate",
+        "ROOT_URL=http://meteor-puja.gigantic.io"
+      ],
+      "domains": {
+        "80/tcp": [
+          "meteor-puja.gigantic.io"
+        ]
+      },
+      "links": [
         {
-          "component_name": "meteor-test",
-          "image": "ulexus/meteor",
-          "ports": [ 80 ],
-          "domains": { "meteor-puja.gigantic.io": 80 },
-          "env":
-            {
-            	"REPO": "https://github.com/Differential/meteor-boilerplate",
-            	"ROOT_URL": "http://meteor-puja.gigantic.io"
-          	},
-          "dependencies": [
-            {
-              "name": "mongo",
-              "port": 27017
-            }
-          ]
-        },
-        {
-          "component_name": "mongo",
-          "image": "mongo",
-          "ports": [27017]
+          "component": "mongo",
+          "target_port": "27017/tcp"
         }
       ]
+    },
+    "mongo": {
+      "image": "mongo",
+      "ports": [
+        27017
+      ]
     }
-  ]
+  }
 }
